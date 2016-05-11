@@ -3,7 +3,7 @@ resources:
   - name: source-code
     type: git
     source:
-      uri: git://10.0.2.2/concourse-maven-cf-simple
+      uri: https://github.com/patrickcrocker/concourse-example-maven-simple.git
       branch: master
 
   - name: cf
