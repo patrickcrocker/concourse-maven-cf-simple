@@ -26,5 +26,5 @@ jobs:
         file: source-code/ci/tasks/build.yml
       - put: cf
         params:
-          manifest: prepare-integration/manifest.yml
+          manifest: source-code/manifest.yml
           path: build-output/concourse-example-maven-simple-0.0.1-SNAPSHOT.jar
