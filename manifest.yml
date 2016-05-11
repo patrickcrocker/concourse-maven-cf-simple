@@ -1,0 +1,7 @@
+---
+applications:
+- name: concourse-maven-cf-simple
+  memory: 512M
+  instances: 1
+  host: concourse-maven-cf-simple
+  path: target/concourse-example-maven-simple-0.0.1-SNAPSHOT.jar

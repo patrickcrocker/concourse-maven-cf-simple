@@ -1,0 +1,30 @@
+---
+resources:
+  - name: source-code
+    type: git
+    source:
+      uri: git://10.0.2.2/concourse-maven-cf-simple
+      branch: master
+
+  - name: cf
+    type: cf
+    source:
+      api: api.local.pcfdev.io
+      username: admin
+      password: admin
+      organization: pcfdev-org
+      space: pcfdev-space
+      skip_cert_check: true
+
+jobs:
+  - name: build
+    public: true
+    plan:
+      - get: source-code
+        trigger: true
+      - task: build
+        file: source-code/ci/tasks/build.yml
+      - put: cf
+        params:
+          manifest: prepare-integration/manifest.yml
+          path: output-dir/concourse-example-maven-simple-0.0.1-SNAPSHOT.jar
