@@ -5,6 +5,6 @@ applications:
   timeout: 180
   instances: 1
   host: concourse-maven-cf-simple
-  path: target/concourse-example-maven-simple-0.0.1-SNAPSHOT.jar
+  path: target/concourse-maven-cf-simple-0.0.1-SNAPSHOT.jar
   env:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
