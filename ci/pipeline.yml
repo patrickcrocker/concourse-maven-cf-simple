@@ -27,4 +27,4 @@ jobs:
       - put: cf
         params:
           manifest: prepare-integration/manifest.yml
-          path: output-dir/concourse-example-maven-simple-0.0.1-SNAPSHOT.jar
+          path: build-output/concourse-example-maven-simple-0.0.1-SNAPSHOT.jar
