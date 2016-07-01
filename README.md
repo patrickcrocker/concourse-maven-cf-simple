@@ -7,7 +7,7 @@ This example project shows:
 ## Prerequisites
 
 This guide assumes you have a working installation of Concourse.  If you don't, please
-follow the Concourse [Hellow World](http://concourse.ci/hello-world.html) guide to get 
+follow the Concourse [Hellow World](http://concourse.ci/hello-world.html) guide to get
 up and running with Concourse locally (uses Vagrant and VirtualBox).
 
 ## Instructions
@@ -15,7 +15,7 @@ up and running with Concourse locally (uses Vagrant and VirtualBox).
 ```
 $ git clone https://github.com/patrickcrocker/concourse-maven-cf-simple.git
 $ cd concourse-maven-cf-simple
-$ fly -t lite set-pipeline -p maven-cf-simple -c ci/pipeline.yml
+$ fly -t lite set-pipeline -p maven-cf-simple -c pipeline.yml
 $ fly -t lite unpause-pipeline -p maven-cf-simple
 ```
 When it is all said and done, you should have the application running on Cloud Foundry!
