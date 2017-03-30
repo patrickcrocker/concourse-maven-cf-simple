@@ -2,3 +2,4 @@
 .project
 .settings/
 target/
+pipeline-secrets.yml
