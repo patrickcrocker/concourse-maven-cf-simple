@@ -1,3 +1,5 @@
+# Copy pipeline-secrets-example.yml to pipeline-secrets.yml and update with your values then run:
+# fly -t ci set-pipeline -p maven-cf-simple -c pipeline.yml -l pipeline-secrets.yml
 ---
 resources:
 - name: source-code
@@ -9,12 +11,12 @@ resources:
 - name: cf
   type: cf
   source:
-    api: api.local.pcfdev.io
-    username: admin
-    password: admin
-    organization: pcfdev-org
-    space: pcfdev-space
-    skip_cert_check: true
+    api: {{cf-api}}
+    username: {{cf-username}}
+    password: {{cf-password}}
+    organization: {{cf-organization}}
+    space: {{cf-space}}
+    #skip_cert_check: true
 
 jobs:
 - name: build
